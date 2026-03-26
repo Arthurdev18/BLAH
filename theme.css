@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+  --wallpaper-url: url('./wallpaper.jpg');
+  --font-family: 'Poppins', 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --letter-spacing: 0.2px;
+
+  /* Color palette - Muted & Girly */
+  --primary-pink: #e8a8c5;
+  --soft-white: #fafafa;
+  --light-lavender: #ede6ff;
+  --pale-rose: #faf0f0;
+  --soft-grey: #f5f3f7;
+  --accent-soft: #d99ed4;
+  --dark-text: #2a2a2a;
+  --light-text: #ffffff;
+  --overlay-dark: rgba(0, 0, 0, 0.25);
+}
+
+  /* Update font families globally */
+  body, * {
+    font-family: var(--font-family) !important;
+    letter-spacing: var(--letter-spacing);
+  }
+
+  /* === MAIN PANELS === */
+  /* Sidebar - semi-transparent over wallpaper */
+  .sidebar-2K8pFh {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(8px);
+    border-right: 1px solid rgba(232, 168, 197, 0.2);
+  }
+
+  /* Channel list container */
+  .container-1D34oG {
+    background: transparent !important;
+  }
+
+  /* Chat area - minimal overlay */
+  .chat-2TfjPW,
+  .chatContent-3cqTG9 {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(237, 230, 255, 0.35)) !important;
+    background-attachment: fixed;
+  }
+
+  /* Right sidebar / member list */
+  .members-3WRCEx {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-left: 1px solid rgba(232, 168, 197, 0.2);
+  }
+
+  /* === BUTTONS & INTERACTIONS === */
+  /* Primary buttons - Soft Muted Pink */
+  .buttonPrimary-jAhfJe,
+  .button-38aScr {
+    background: linear-gradient(135deg, var(--accent-soft), #d08ec9) !important;
+    color: var(--light-text) !important;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(217, 158, 212, 0.25);
+  }
+
+  .buttonPrimary-jAhfJe:hover,
+  .button-38aScr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(217, 158, 212, 0.35);
+    background: linear-gradient(135deg, #d08ec9, #c77db5) !important;
+  }
+
+  /* Secondary buttons */
+  .buttonSecondary-qdMiMc {
+    background: rgba(255, 255, 255, 0.7) !important;
+    color: #2a2a2a !important;
+    border: 2px solid #d99ed4;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .buttonSecondary-qdMiMc:hover {
+    background: rgba(232, 168, 197, 0.25) !important;
+    box-shadow: 0 2px 8px rgba(217, 158, 212, 0.2);
+  }
+
+  /* === MESSAGES & TEXT === */
+  /* Message styling - subtle background */
+  .message-2qRu38 {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    margin: 4px 0;
+    padding: 8px 12px;
+    transition: all 0.2s ease;
+  }
+
+  .message-2qRu38:hover {
+    background: rgba(255, 255, 255, 0.75);
+  }
+
+  /* Username styling - HIGH CONTRAST */
+  .username-1A8-ko {
+    color: #b8378e;
+    font-weight: 700;
+    font-size: 14px;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  }
+
+  /* Message text - ensure contrast */
+  .markup-2BOw-j {
+    color: #1a1a1a;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  /* === INPUT AREAS === */
+  /* Chat input box - better contrast, NO blinding glow */
+  .channelTextArea-1FufC0 textarea,
+  .textAreaEdit-bv1qH6,
+  .textarea-2r0sss {
+    background: rgba(255, 255, 255, 0.75) !important;
+    border: 2px solid rgba(232, 168, 197, 0.4);
+    border-radius: 20px;
+    color: #1a1a1a !important;
+    transition: all 0.3s ease;
+    box-shadow: none !important;
+    font-weight: 500;
+  }
+
+  .textarea-2r0sss:focus,
+  .textAreaEdit-bv1qH6:focus {
+    border-color: #d99ed4 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: inset 0 0 0 1px #d99ed4 !important;
+  }
+
+  /* === CHANNELS & SIDEBAR === */
+  /* Channel item styling - ENSURE CONTRAST */
+  .channel-2QD9_O {
+    color: #2a2a2a;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+
+  .channel-2QD9_O:hover {
+    background: rgba(232, 168, 197, 0.15);
+    color: #8b2e6b;
+  }
+
+  .channel-2QD9_O.selected-1Drb7Z {
+    background: rgba(232, 168, 197, 0.25) !important;
+    color: #6b1c50;
+    font-weight: 700;
+    box-shadow: -4px 0 12px rgba(217, 158, 212, 0.2);
+  }
+
+  /* Member list items */
+  .member-2gU6Cr {
+    color: #2a2a2a;
+    transition: all 0.2s ease;
+  }
+
+  .member-2gU6Cr:hover {
+    background: rgba(232, 168, 197, 0.1);
+    color: #8b2e6b;
+  }
+
+  /* === MODALS & POPUPS === */
+  /* Modal styling - semi-transparent over wallpaper */
+  .modal-yWgWj1,
+  .root-1gCeng {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(250, 245, 255, 0.93)) !important;
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(232, 168, 197, 0.15);
+  }
+
+  /* Modal header */
+  .header-2V06qX {
+    background: linear-gradient(135deg, #d99ed4, #c77db5);
+    color: white;
+    border-radius: 16px 16px 0 0;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(217, 158, 212, 0.2);
+  }
+
+  /* === CLOSE BUTTONS & ICONS === */
+  .close-hZ94c6,
+  [aria-label="Close"] {
+    color: #2a2a2a;
+    transition: all 0.2s ease;
+  }
+
+  .close-hZ94c6:hover {
+    background: rgba(232, 168, 197, 0.2);
+    color: #8b2e6b;
+    transform: rotate(90deg);
+  }
+
+  /* === SCROLLBARS === */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(232, 168, 197, 0.08);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #d99ed4, #c77db5);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #c77db5, #b86aa5);
+    box-shadow: 0 0 4px rgba(217, 158, 212, 0.3);
+  }
+
+  /* === DISCORD NITRO & BADGES === */
+  .badge-3Mzlin,
+  .profileBadge-2pC6G_ {
+    background: linear-gradient(135deg, #d99ed4, #c77db5);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(217, 158, 212, 0.25);
+  }
+
+  /* === STATUS INDICATORS === */
+  .mask-xp1r5e,
+  .status-ly5s7s {
+    filter: drop-shadow(0 0 2px rgba(217, 158, 212, 0.3));
+  }
+
+  .online-z2fzT3 {
+    background-color: #43b581 !important;
+  }
+
+  .idle-3B7HwY {
+    background-color: #faa61a !important;
+  }
+
+  .dnd-KKjDKJ {
+    background-color: #f04747 !important;
+  }
+
+  /* === REACTIONS & EMOJIS === */
+  .reaction-3vwAF2 {
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(232, 168, 197, 0.25);
+    border-radius: 15px;
+    transition: all 0.2s ease;
+    color: #2a2a2a;
+  }
+
+  .reaction-3vwAF2:hover,
+  .reaction-3vwAF2.reactionMe-wv5HWA {
+    background: rgba(232, 168, 197, 0.2);
+    border-color: #d99ed4;
+    transform: scale(1.1);
+  }
+
+  /* === CODE BLOCKS === */
+  code, pre {
+    background: rgba(232, 168, 197, 0.12);
+    border: 1px solid rgba(232, 168, 197, 0.25);
+    border-radius: 8px;
+    color: #8b2e6b;
+    font-family: 'Courier New', monospace;
+    padding: 4px 8px;
+  }
+
+  pre {
+    padding: 12px;
+    overflow-x: auto;
+  }
+
+  /* === USER POPOUT === */
+  .userProfile-2XrvG1,
+  .userPopout-QpFeKd {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(250, 245, 255, 0.95)) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(232, 168, 197, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  /* === TOOLTIPS - CRITICAL FOR CONTRAST === */
+  .tooltip-1rEcKB {
+    background: rgba(42, 42, 42, 0.95) !important;
+    border: 1px solid rgba(232, 168, 197, 0.2);
+    border-radius: 8px;
+    color: #f5f5f5;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  /* === ANIMATIONS === */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .message-2qRu38 {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  /* === TEXT SELECTION === */
+  ::selection {
+    background: rgba(232, 168, 197, 0.35);
+    color: #2a2a2a;
+  }
+
+  /* === ADJUSTMENTS FOR BETTER VISIBILITY === */
+  .separator-gCa7g7 {
+    background: rgba(232, 168, 197, 0.15);
+    margin: 8px 0;
+  }
+
+  /* === LINKS === */
+  a, .link-Azu0v0 {
+    color: #a8347d;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-weight: 500;
+  }
+
+  a:hover, .link-Azu0v0:hover {
+    color: #8b2e6b;
+    text-decoration: underline;
+  }
+
+  /* Smooth transitions */
+  * {
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  }
